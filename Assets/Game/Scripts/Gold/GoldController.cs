@@ -22,7 +22,13 @@ public class GoldController : MonoBehaviour
         _goldIncreaseValue = Random.Range(1, 10);
         _totalGoldCount += _goldIncreaseValue;
         _totalGoldCountText.SetText(_totalGoldCount.ToString());
-        //Debug.Log("Kazanılan Puan :" + _goldIncreaseValue + "  Toplam Puan :" + _totalGoldCount);
-      
+        //Debug.Log("Kazanılan Puan :" + _goldIncreaseValue + "  Toplam Puan :" + _totalGoldCount);      
+    }
+    public void DecreasedGold()
+    {
+        _totalGoldCount--;
+        if (_totalGoldCount < 0 )
+            _totalGoldCount = 0;
+        _totalGoldCountText.SetText(_totalGoldCount.ToString());
     }
 }
