@@ -3,16 +3,28 @@ using UnityEditor;
 using UnityEngine;
 public class GoldCreator : MonoBehaviour
 {
+    #region SINGLETON
+    public static GoldCreator instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+    #endregion
+
+
+
     [SerializeField] private GameObject _goldPrefab;
     //[SerializeField] private int _goldCount;
     [SerializeField] private float _spacing;
     [SerializeField] private int _column;
     [SerializeField] private int _row;
     [SerializeField] private Vector3 _startPosition;
-    
+
+    public int totalGoldCount;
 
     private void Start()
     {
+        totalGoldCount = _row * _column;
         CreateGold();
     }
 
@@ -27,4 +39,9 @@ public class GoldCreator : MonoBehaviour
             
         }
     }  
+    public void DecreaseGoldCount()
+    {
+        totalGoldCount--;
+        if (totalGoldCount == 0) { UiManager.Instance.OpenPanel(UiManager.Instance.nextLevelPanel); }
+    }
 }
