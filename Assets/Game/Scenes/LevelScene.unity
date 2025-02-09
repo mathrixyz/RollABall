@@ -1997,8 +1997,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa987e00117f6440a46faede10c97db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextLevelPanel: {fileID: 413039833}
-  _failedLevelPanel: {fileID: 1714725757}
+  nextLevelPanel: {fileID: 413039833}
+  failedLevelPanel: {fileID: 1714725757}
 --- !u!1 &1307304886
 GameObject:
   m_ObjectHideFlags: 0
