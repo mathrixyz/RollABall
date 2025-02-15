@@ -42,6 +42,7 @@ public class GoldCreator : MonoBehaviour
     public void DecreaseGoldCount()
     {
         totalGoldCount--;
-        if (totalGoldCount == 0) { UiManager.Instance.OpenPanel(UiManager.Instance.nextLevelPanel); }
+        //if (totalGoldCount == 0) { UiManager.Instance.OpenPanel(UiManager.Instance.nextLevelPanel); }
+        //i(totalGoldCount == 0) { UiManager.Instance.OpenPanel(UiManager.Instance.nextLevelPanel); }
     }
 }

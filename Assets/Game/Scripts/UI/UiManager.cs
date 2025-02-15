@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UiManager : MonoBehaviour
 {
@@ -33,5 +34,15 @@ public class UiManager : MonoBehaviour
         failedLevelPanel.SetActive(false);
 
         openedPanel.SetActive(true);
+    }
+
+    public void NextLevelButton()
+    {
+        SceneManager.LoadScene(2);
+    } 
+    
+    public void RetryLevelButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

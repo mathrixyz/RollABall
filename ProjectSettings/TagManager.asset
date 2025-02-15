@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gold
   - Obstacle
+  - NextLevelPoint
   layers:
   - Default
   - TransparentFX

@@ -18,7 +18,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
             
         }
 
-       
+        if (other.CompareTag("NextLevelPoint"))
+        {
+            UiManager.Instance.OpenPanel(UiManager.Instance.nextLevelPanel);
+            GetComponent<PlayerMovementController>().isMovement = false;
+        }
+
+
+
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -27,6 +34,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
             GoldController.Instance.DecreasedGold();
             //UiManager.Instance.OpenFailedLevelPanel();
             UiManager.Instance.OpenPanel(UiManager.Instance.failedLevelPanel);
+            GetComponent<PlayerMovementController>().isMovement = false;
         }
     }
 
